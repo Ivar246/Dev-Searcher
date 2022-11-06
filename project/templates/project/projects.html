@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h3>Hello, you are on {{ page }} page.</3>
+{% if number > 10 %}
+<p>Number is greater than 10.</p>
+{% elif number == 10 %}
+<p>Number is exactly </p>
+{% else %}
+<p>Number is less than 10.</p>
+{% endif %}
+
+<hr>
+<h1>Projects</h1>
+<ul>
+    {% for project in projects %}
+    <li>Title: <a href="{% url 'project' project.id %}">{{project.title}} </a>--- {{ project.description }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Projects Templates</h1>
+<p>some of the dummy text i don't know hahaa funny huh it s the fomst kljflkdjaljflkseriou
+    soud dk the and hte anme fo he lorem ipsunm is  the dummy text i am the hello and  hjgj
+</p>
+
+{% endblock %}
